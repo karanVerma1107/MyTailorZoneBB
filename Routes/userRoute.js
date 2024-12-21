@@ -27,10 +27,10 @@ Userrouter.route('/addToCart').post(isAuthenticatedUser, addToCart);
 
 Userrouter.route('/addToWishlist').post(isAuthenticatedUser, addToWishlist);
 
-Userrouter.route('/removeFromWishlist').post(isAuthenticatedUser, removeFromWishlist);
+Userrouter.route('/removeFromWishlist').delete(isAuthenticatedUser, removeFromWishlist);
 
 
-Userrouter.route('/removeFromCart').post(isAuthenticatedUser, removeFromCart);
+Userrouter.route('/removeFromCart').delete(isAuthenticatedUser, removeFromCart);
 
 
 export default Userrouter;

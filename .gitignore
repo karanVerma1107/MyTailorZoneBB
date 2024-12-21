@@ -1,3 +1,9 @@
 o.env 
 
 package-lock.json
+
+# Node.js specific
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log

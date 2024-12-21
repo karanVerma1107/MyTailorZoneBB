@@ -21,6 +21,11 @@ const discountSchema = new mongoose.Schema({
         enum: ['stock', 'price'],
         required: true, // Condition type for discount (stock or price)
     },
+    choice:{
+        type:String,
+        enum:['greater than', 'less than'],
+        required: true
+    },
     value: {
         type: Number,
         required: true, // The value for the condition (e.g., minimum stock or price)
@@ -58,3 +63,6 @@ discountSchema.pre('save', function(next) {
 const Discount = mongoose.model('Discount', discountSchema);
 
 export default Discount;
+
+
+
